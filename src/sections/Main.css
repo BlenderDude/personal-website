@@ -1,0 +1,46 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    padding-top: 50px;
+    box-sizing: border-box;
+    background-color: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.name {
+    display: block;
+    margin: 0;
+    font-size: 56px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    z-index: 3;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width: 920px) {
+    .name {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .name {
+        font-size: 36px;
+    }
+}

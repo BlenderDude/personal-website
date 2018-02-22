@@ -1,0 +1,73 @@
+.container {
+    padding: 25px 25px 150px;
+    z-index: 3;
+    position: relative;
+    box-shadow: 0 0 50px 5px #111;
+    background-color: rgba(17, 17, 17, 0.8);
+    user-select: none;
+}
+
+.container h1, h2 {
+    margin: 0;
+    text-align: center;
+    color: #eee;
+}
+
+.container h1 {
+    font-size: 92px;
+}
+
+.container h2 {
+    font-size: 64px;
+}
+
+@media screen and (max-width: 940px) {
+    .container h1 {
+        font-size: 72px;
+    }
+
+    .container h2 {
+        font-size: 54px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container h1 {
+        font-size: 60px;
+    }
+
+    .container h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container h1 {
+        font-size: 60px;
+    }
+}
+
+.build {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    transition-delay: 450ms;
+}

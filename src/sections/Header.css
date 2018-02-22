@@ -1,0 +1,112 @@
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background-color: #222;
+    z-index: 10;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ccc;
+    border-bottom: solid #ccc 2px;
+}
+
+.header {
+    font-size: 28px;
+}
+
+.spacer {
+    display: flex;
+    flex: 1;
+}
+
+.link {
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    transition: all 250ms ease-out;
+}
+
+.link:hover {
+    color: #ddd;
+}
+
+.link .bar {
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ddd;
+    transform: scaleX(0);
+    transition: inherit;
+}
+
+.link:hover .bar {
+    transform: scaleX(1);
+}
+
+.lastLetters {
+    display: inline-block;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+}
+
+.aniel {
+    width: 70px;
+}
+
+.small .lastLetters {
+    width: 0;
+    opacity: 0;
+}
+
+.sectionTitle {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    font-size: 32px;
+    transition: all 500ms ease-in-out;
+}
+
+.above {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.below {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.on {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media screen and (max-width: 920px) {
+    .lastLetters {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .name {
+        display: none;
+    }
+
+    .sectionTitle {
+        justify-content: flex-start;
+        padding-left: 15px;
+        font-size: 24px;
+    }
+}

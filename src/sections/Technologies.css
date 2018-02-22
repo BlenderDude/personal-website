@@ -1,0 +1,87 @@
+.container {
+    width: 100vw;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 4;
+}
+
+.header {
+    font-size: 36px;
+    text-align: center;
+}
+
+.technologies {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.technology {
+    width: 16.666%;
+    height: 16.666vw;
+    background-color: #222;
+    border: solid white 1px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*transition: all 150ms linear;*/
+}
+
+@media screen and (max-width: 1200px) {
+    .technology {
+        width: 25%;
+        height: 25vw;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .technology {
+        width: 33.333%;
+        height: 33.333vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .technology {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.language {
+    font-size: 26px;
+    font-family: Monospaced, monospace;
+    text-align: center;
+    color: #ddd;
+}
+
+.html {
+    background-color: #cc6c3c;
+}
+
+.css3 {
+    background-color: #5195e2;
+}
+
+.javascript {
+    background-color: #e3d665;
+}
+
+.php {
+    background-color: #8e42cc;
+}
+
+.react {
+    background-color: #3850ff;
+}
+
+.mysql {
+    background-color: #e28859;
+}
+
+.node {
+    background-color: #54c970;
+}
