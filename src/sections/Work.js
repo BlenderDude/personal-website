@@ -23,7 +23,7 @@ const PROJECTS = [
         keyFeatures: [
             {
                 title: "Administration",
-                description: "Admins of the app are able to delete posts that they deem inappropriate. That's assuming the post managed to slip past the automatic content filter. Admins are also able to approve accounts to allow them to upload photos and comment on others' photos. Admins are also able to change the trip data and have the app send a push notification to the users notifying them of the change.",
+                description: "Admins of the app are able to delete posts that they deem inappropriate. That's assuming the post managed to slip past the automatic content filter. Account approval before posting or commenting stop any possible trolls right in their tracks. When an admin changes an item in the itinerary, a push notification is sent to all users to keep them up to speed on the latest changes.",
                 image: granvilleBandsAdministration,
             },
             {

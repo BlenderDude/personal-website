@@ -4,9 +4,9 @@
 
 }
 .star {
-    stroke-width: 5px;
-    stroke-dasharray: 285;
-    stroke-dashoffset: 285px;
+    stroke-width: 1px;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290px;
     stroke: #fff;
     fill: #000;
 }

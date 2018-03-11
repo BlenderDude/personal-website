@@ -12,7 +12,7 @@ export default class Footer extends Component {
                 <div>
                     <div className={s.callToAction}>Got an idea?</div>
                     <div className={s.contact} onClick={() => this.props.setContact(true)}>
-                        Contact
+                        Contact Me
                     </div>
                     <div className={s.callToAction}>or, get to know me</div>
                     <div className={s.logos}>
