@@ -1,0 +1,173 @@
+.container {
+    background-color: #000;
+    color: white;
+    width: 100%;
+}
+
+.projects{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    padding: 30px;
+}
+
+.image img {
+    width: 25vw;
+    max-width: 400px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1500ms ease-in-out;
+
+}
+
+.active .image img {
+    transition-delay: 1000ms;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.descriptionContainer{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.description {
+    padding: 100px 50px;
+    max-width: 700px;
+}
+
+.title {
+    color: white;
+    font-size: 72px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1500ms ease-in-out;
+}
+
+.active .title {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.features{
+    color: white;
+    font-size: 42px;
+}
+
+.feature{
+    transform: translateY(10px);
+    transition: all 1500ms ease-in-out;
+    opacity: 0;
+}
+
+.active .feature{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    color: white;
+    align-items: flex-end;
+
+}
+
+.reviewCount{
+    margin-left: 10px;
+    font-weight: 200;
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+}
+
+.active .reviewCount{
+    transition-delay: 1750ms;
+    opacity: 1;
+}
+
+.reviewCount span{
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+
+.story{
+    font-size: 24px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    margin-top: 15px;
+}
+
+.active .story{
+    transition-delay: 2000ms;
+    opacity: 1;
+}
+
+.featureImage img{
+    width: 25vw;
+    max-width: 400px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1500ms ease-in-out;
+}
+
+.active .featureImage img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.featureDescription{
+    padding: 100px 20px;
+}
+
+.featureTitle{
+    color: white;
+    font-size: 72px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1500ms ease-in-out;
+}
+
+.active .featureTitle {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.featureStory{
+    font-size: 24px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out 1000ms;
+    margin-top: 15px;
+}
+
+.active .featureStory{
+    opacity: 1;
+}
+
+.quote{
+    margin: 100px 0;
+    padding: 50px 60px;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+    transform: translateY(30px);
+}
+
+.active .quote{
+    opacity: 1;
+    background-color: #111;
+    transform: translateY(0px);
+}
+
+.quoteContent{
+    font-size: 42px;
+    font-style: italic;
+}

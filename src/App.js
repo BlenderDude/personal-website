@@ -4,6 +4,8 @@ import Header from "./sections/Header"
 import Main from "./sections/Main"
 import Technologies from "./sections/Technologies"
 import ContactModal from "./components/ContactModal"
+import Work from "./sections/Work";
+import Footer from "./sections/Footer";
 
 class App extends Component {
     state = {
@@ -53,8 +55,12 @@ class App extends Component {
                 <Technologies
                     scroll={this.state.scroll}
                 />
-                <Main/>
+                <Work/>
                 <ContactModal
+                    open={this.state.contactModal}
+                    setContact={this._setContact.bind(this)}
+                />
+                <Footer
                     open={this.state.contactModal}
                     setContact={this._setContact.bind(this)}
                 />

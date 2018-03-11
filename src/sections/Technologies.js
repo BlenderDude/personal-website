@@ -10,7 +10,7 @@ const TECHNOLOGIES = [
     `mySQL`,
     `()=>nodeJS`,
     `Redux{}`,
-    `<-Socket.IO->`,
+    `AWS`,
     `React Native`,
     `Objective-C`,
     `Wordpress`,
@@ -18,10 +18,33 @@ const TECHNOLOGIES = [
 
 export default class Technologies extends Component {
 
+    state = {
+        active: false,
+    }
+
+    TRIGGER_POINT = 650
+
+    _handleScroll() {
+        this.setState({
+            active: this.container.getBoundingClientRect().y < this.TRIGGER_POINT
+        })
+    }
+
+    componentDidMount() {
+        this.bound_handleScroll = this._handleScroll.bind(this)
+        this.bound_handleScroll()
+        document.addEventListener('scroll', this.bound_handleScroll)
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.bound_handleScroll)
+    }
+
     render() {
         return (
             <div
-                className={s.container}
+                className={[s.container, this.state.active ? s.active : ''].join(' ')}
+                ref={ref => this.container = ref}
             >
                 {/*<h1 className={s.header}>Technologies</h1>*/}
                 <div className={s.technologies}>
@@ -29,6 +52,9 @@ export default class Technologies extends Component {
                         <div
                             key={i}
                             className={[s.technology].join(' ')}
+                            style={{
+                                transitionDelay: i * 150 + "ms"
+                            }}
                         >
                             <div>
                                 <div className={s.language}>{technology}</div>

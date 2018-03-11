@@ -27,7 +27,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*transition: all 150ms linear;*/
+    transition: all 500ms linear;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.active .technology {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
