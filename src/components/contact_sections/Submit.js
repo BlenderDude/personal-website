@@ -15,7 +15,7 @@ export default class Submit extends Component {
                 stage === "SUBMITTING" ? s.submitting : '',
                 stage === "SUBMITTED" ? s.submitted : '',
             ].join(' ')}
-                 onClick={this.props.updateStage.bind(this, "SUBMITTING")}
+                 onClick={this.props.submit}
             >
                 {stage === "SUBMITTED" ? "Sent" : "Submit"}
             </div>

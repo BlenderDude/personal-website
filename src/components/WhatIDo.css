@@ -2,15 +2,15 @@
     padding: 25px 25px 150px;
     z-index: 3;
     position: relative;
-    box-shadow: 0 0 50px 5px #111;
-    background-color: rgba(17, 17, 17, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     user-select: none;
 }
 
 .container h1, h2 {
     margin: 0;
     text-align: center;
-    color: #eee;
+    color: #fff;
+    text-shadow: 0 0 15px black;
 }
 
 .container h1 {

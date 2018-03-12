@@ -1,13 +1,25 @@
 .container {
     width: 100vw;
     max-width: 100%;
-    background-color: #fff;
+    background-color: #000;
     z-index: 4;
 }
 
 .header {
-    font-size: 36px;
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    margin: 40px auto;
+    padding: 0 20px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 1500ms ease-in-out;
+}
+
+.active .header{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .technologies {
@@ -21,7 +33,7 @@
 .technology {
     width: 16.666%;
     height: 16.666vw;
-    background-color: #222;
+    background-color: #000;
     border: solid white 1px;
     box-sizing: border-box;
     display: flex;

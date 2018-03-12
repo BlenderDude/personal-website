@@ -1,4 +1,5 @@
 import validator from 'validator'
+import store from '../store'
 
 const P = "CONTACT_"
 
@@ -21,6 +22,37 @@ export function updateFieldValue(field, value) {
 export function updateFieldFocus(field, focus) {
     return dispatch => {
         dispatch(updateFocused(field, focus))
+    }
+}
+
+export function submit() {
+    return dispatch =>{
+        const inquiryType = store.getState().contact.stage ==="GENERAL_INQUIRY"? "INQUIRY":"PROPOSAL"
+        dispatch({
+            type: P + "UPDATE_STAGE",
+            data: "SUBMITTING",
+        })
+        console.log({
+            ...store.getState().contact,
+            stage: inquiryType,
+        })
+        fetch('/inquiry', {
+            method: "POST",
+            body: JSON.stringify({
+                ...store.getState().contact,
+                stage: inquiryType,
+            })
+        }).then(()=>{
+            dispatch({
+                type: P + "UPDATE_STAGE",
+                data: "SUBMITTED",
+            })
+        }).catch(()=>{
+            dispatch({
+                type: P + "UPDATE_STAGE",
+                data: "SUBMITTED",
+            })
+        })
     }
 }
 

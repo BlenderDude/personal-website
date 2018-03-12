@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import s from './ContactModal.css'
 import profilePhoto from '../img/profile_photo.jpg'
 import ContactInfo from "./contact_sections/ContactInfo"
-import {updateStage} from "../actions/contact"
+import {updateStage,submit} from "../actions/contact"
 import GeneralInquiry from "./contact_sections/GeneralInquiry"
 import Submit from "./contact_sections/Submit"
 import BackButton from "./contact_sections/BackButton"
@@ -23,20 +23,6 @@ class ContactModal extends Component {
             this.downElement = null
         }
     }
-
-    _submit() {
-        this.setState({
-            showErrors: false,
-            stage: "SUBMITTING",
-        })
-        setTimeout(() => {
-            this.setState({
-                showErrors: false,
-                stage: "SUBMITTED",
-            })
-        }, 1000 + 4500)
-    }
-
 
     render() {
         const {
@@ -102,6 +88,7 @@ class ContactModal extends Component {
                         inquiry={inquiry.value}
                         description={description.value}
                         updateStage={updateStage}
+                        submit={this.props.submit}
                     />
                 </div>
             </div>
@@ -120,7 +107,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    updateStage: (stage) => dispatch(updateStage(stage))
+    updateStage: (stage) => dispatch(updateStage(stage)),
+    submit: () => dispatch(submit()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactModal)

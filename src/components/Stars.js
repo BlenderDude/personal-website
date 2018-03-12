@@ -46,7 +46,7 @@ class Star extends Component {
                     className={[s.star, this.state.filled ? s.filled : ''].join(" ")}
                     ref={ref => this.star = ref}
                     style={{
-                        transition: `stroke-dashoffset 1000ms ease-in-out ${this.props.index * 100 + "ms"}, fill 1000ms ease-out 1750ms` ,
+                        transition: `stroke-dashoffset 1000ms ease-in-out ${this.props.filled?this.props.index * 100:0}ms, fill 1000ms ease-out ${this.props.filled?1750:0}ms` ,
                     }}
                     points="41.3 1.13 53.73 26.32 81.52 30.35 61.41 49.96 66.16 77.64 41.3 64.57 16.44 77.64 21.19 49.96 1.07 30.35 28.87 26.32 41.3 1.13"
                 />

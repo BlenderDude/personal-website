@@ -16,10 +16,10 @@ const PROJECTS = [
         description: 'This app was designed for Granville High School Band with the intent to allow students to share photos and keep updates about their trip to the Outback Bowl. Students could share their photos and they would be posted on the main feed of the app. Other users are then able to like and comment on the photos. The app also integrated a trip planning feature to allow the director to update the app and keep the students up-to-date on last minute changes to the trip agenda.',
         stars: 5,
         reviews: 24,
-        quote: {
-            content: "Here is a placeholder quote for something Mr. Jerod Smith might possibly say",
-            saidBy: "Jerod Smith (Band Director)"
-        },
+        // quote: {
+        //     content: "Here is a placeholder quote for something Mr. Jerod Smith might possibly say",
+        //     saidBy: "Jerod Smith (Band Director)"
+        // },
         keyFeatures: [
             {
                 title: "Administration",
@@ -36,9 +36,35 @@ const PROJECTS = [
 ]
 
 export default class Work extends Component {
+    state = {
+        active: false,
+    }
+
+    TRIGGER_POINT = 650
+
+    _handleScroll() {
+        this.setState({
+            active: this.container.getBoundingClientRect().y < this.TRIGGER_POINT
+        })
+    }
+
+    componentDidMount() {
+        this.bound_handleScroll = this._handleScroll.bind(this)
+        this.bound_handleScroll()
+        document.addEventListener('scroll', this.bound_handleScroll)
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.bound_handleScroll)
+    }
+
     render() {
         return (
             <div className={s.container}>
+                <div
+                    className={[s.header, this.state.active ? s.active : ''].join(' ')}
+                    ref={ref => this.container = ref}>Projects I've Completed
+                </div>
                 <div className={s.projects}>
                     {PROJECTS.map((project, index) => <Project {...project} key={index}/>)}
                 </div>
@@ -96,9 +122,12 @@ class Project extends Component {
                         <img src={this.props.image}/>
                     </div>
                 </div>
-                <div>
-                    <Quote quote={this.props.quote}/>
-                </div>
+                {this.props.quote ?
+                    <div>
+                        <Quote quote={this.props.quote}/>
+                    </div>
+                    : null}
+
                 {this.props.keyFeatures.map((feature, index) => <Feature key={index} {...feature}/>)}
             </div>
         )
@@ -110,7 +139,7 @@ class Quote extends Component {
         active: false,
     }
 
-    TRIGGER_POINT = 650
+    TRIGGER_POINT = 800
 
     _handleScroll() {
         this.setState({

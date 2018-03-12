@@ -46,7 +46,7 @@ export default class Technologies extends Component {
                 className={[s.container, this.state.active ? s.active : ''].join(' ')}
                 ref={ref => this.container = ref}
             >
-                {/*<h1 className={s.header}>Technologies</h1>*/}
+                <h1 className={s.header}>Technologies I Work With</h1>
                 <div className={s.technologies}>
                     {TECHNOLOGIES.map((technology, i) =>
                         <div

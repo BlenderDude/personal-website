@@ -32,8 +32,12 @@ export default class WhatIDo extends Component {
                 <h2>and I build</h2>
                 {this.state.build.map((build, index) => {
                     return (
-                        <h1 key={index}
-                            className={[s.build, index === this.state.buildIndex ? s.active : ''].join(' ')}>{build}</h1>
+                        <h1
+                            key={index}
+                            className={[s.build, index === this.state.buildIndex ? s.active : ''].join(' ')}
+                        >
+                            {build}
+                        </h1>
                     )
                 })}
 
