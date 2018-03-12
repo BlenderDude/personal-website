@@ -26,12 +26,12 @@
     user-select: none;
 }
 
-.contact:hover{
+.contact:hover {
     background-color: #fff;
     color: #000;
 }
 
-.logos{
+.logos {
 
     display: flex;
     flex-direction: row;
@@ -41,8 +41,31 @@
     margin-top: 50px;
 }
 
-.logo{
+.logo {
     width: 80px;
     height: 80px;
 
+}
+
+@media screen and (max-width: 720px) {
+    .container{
+        height: 400px;
+    }
+    .callToAction{
+        font-size: 36px;
+    }
+
+    .contact{
+        font-size: 24px;
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .logos{
+        width: 100%;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
 }

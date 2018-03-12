@@ -196,11 +196,10 @@ class Feature extends Component {
 
     render() {
         return (
-            <div className={[s.project, this.state.active ? s.active : ''].join(' ')}
-                 ref={ref => this.container = ref}>
-                <div className={s.featureImage}>
-                    <img src={this.props.image}/>
-                </div>
+            <div
+                className={[s.featureSection, this.state.active ? s.active : ''].join(' ')}
+                ref={ref => this.container = ref}
+            >
                 <div className={s.featureDescription}>
                     <div className={s.featureTitle}>
                         {this.props.title}
@@ -208,6 +207,9 @@ class Feature extends Component {
                     <div className={s.featureStory}>
                         {this.props.description}
                     </div>
+                </div>
+                <div className={s.featureImage}>
+                    <img src={this.props.image}/>
                 </div>
             </div>
         )

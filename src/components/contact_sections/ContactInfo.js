@@ -54,7 +54,7 @@ class ContactInfo extends Component {
                 <div className={s.row}>
                     <input
                         className={calculateFieldClass(email.edited, email.focused, email.error)}
-                        type="text"
+                        type="email"
                         placeholder="Email"
                         value={email.value}
                         onChange={(e) => updateFieldValue("email", e.target.value)}

@@ -26,8 +26,8 @@ export function updateFieldFocus(field, focus) {
 }
 
 export function submit() {
-    return dispatch =>{
-        const inquiryType = store.getState().contact.stage ==="GENERAL_INQUIRY"? "INQUIRY":"PROPOSAL"
+    return dispatch => {
+        const inquiryType = store.getState().contact.stage === "GENERAL_INQUIRY" ? "INQUIRY" : "PROPOSAL"
         dispatch({
             type: P + "UPDATE_STAGE",
             data: "SUBMITTING",
@@ -42,12 +42,12 @@ export function submit() {
                 ...store.getState().contact,
                 stage: inquiryType,
             })
-        }).then(()=>{
+        }).then(() => {
             dispatch({
                 type: P + "UPDATE_STAGE",
                 data: "SUBMITTED",
             })
-        }).catch(()=>{
+        }).catch(() => {
             dispatch({
                 type: P + "UPDATE_STAGE",
                 data: "SUBMITTED",

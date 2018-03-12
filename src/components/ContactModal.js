@@ -44,6 +44,8 @@ class ContactModal extends Component {
                 ].join(' ')}
                 onMouseDown={this._down.bind(this)}
                 onMouseUp={this._up.bind(this)}
+                onTouchStart={this._down.bind(this)}
+                onTouchEnd={this._up.bind(this)}
                 ref={ref => this.background = ref}
             >
                 <div className={[
