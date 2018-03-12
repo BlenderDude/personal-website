@@ -239,6 +239,10 @@
         display: block;
     }
 
+    .active .image img {
+        transition-delay: 0ms;
+    }
+
     .featureImage{
         display: flex;
         justify-content: center;
