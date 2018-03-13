@@ -16,10 +16,10 @@ const PROJECTS = [
         description: 'This app was designed for Granville High School Band with the intent to allow students to share photos and keep updates about their trip to the Outback Bowl. Students could share their photos and they would be posted on the main feed of the app. Other users are then able to like and comment on the photos. The app also integrated a trip planning feature to allow the director to update the app and keep the students up-to-date on last minute changes to the trip agenda.',
         stars: 5,
         reviews: 24,
-        // quote: {
-        //     content: "Here is a placeholder quote for something Mr. Jerod Smith might possibly say",
-        //     saidBy: "Jerod Smith (Band Director)"
-        // },
+        quote: {
+            content: "Being a programmer takes a lot of skill, but also the ability to take feedback and suggestions. Daniel takes feedback quite well and makes adjustments very quickly. His Granville Bands App was incredibly helpful in operation as well as professional in appearance and function.",
+            saidBy: "Jerod Smith (Granville high School Band Director)"
+        },
         keyFeatures: [
             {
                 title: "Administration",
