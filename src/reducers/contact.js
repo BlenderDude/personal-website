@@ -1,7 +1,7 @@
 const P = "CONTACT_"
 
 const initialState = {
-    stage: "SUBMITTED",
+    stage: "CONTACT_INFO",
     firstName: {
         value: '',
         edited: false,

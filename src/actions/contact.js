@@ -32,10 +32,6 @@ export function submit() {
             type: P + "UPDATE_STAGE",
             data: "SUBMITTING",
         })
-        console.log({
-            ...store.getState().contact,
-            stage: inquiryType,
-        })
         fetch('/inquiry', {
             method: "POST",
             body: JSON.stringify({
